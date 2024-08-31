@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./todo.css";
 
 const TodoList = () => {
@@ -17,7 +17,11 @@ const TodoList = () => {
 			newTodos[fromStatus] = newTodos[fromStatus].filter(
 				(todo) => todo !== item
 			);
+			console.log("from", newTodos[fromStatus]);
+
 			newTodos[toStatus].push(item);
+			console.log("to", newTodos[toStatus]);
+
 			return newTodos;
 		});
 	};

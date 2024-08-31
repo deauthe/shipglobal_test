@@ -1,0 +1,117 @@
+.dialog {
+	max-width: 400px;
+	width: max-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: #000000;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+}
+
+.dialog-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1rem;
+	color: #ffffff;
+}
+
+.dialog-jumble {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1.5rem;
+	color: #4a5568;
+	letter-spacing: 0.9rem;
+}
+
+.dialog-input-area {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.dialog-input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #cbd5e0;
+	border-radius: 4px;
+	outline: none;
+	background-color: transparent;
+	color: #ffffff;
+}
+
+.dialog-input:focus {
+	border-color: rgba(66, 153, 225, 0.8); /* Blue border with 80% opacity */
+	box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.dialog-hint {
+	font-size: 0.875rem;
+	color: #718096;
+	font-style: italic;
+}
+
+.dialog-error {
+	font-size: 0.875rem;
+	color: #e53e3e;
+}
+
+.dialog-success {
+	font-size: 0.875rem;
+	color: #38a169;
+	font-weight: bold;
+}
+
+.dialog-actions {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.dialog-refresh-button,
+.dialog-submit-button {
+	flex: 1;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dialog-refresh-button {
+	background-color: #4299e1;
+}
+
+.dialog-refresh-button:hover {
+	background-color: #3182ce;
+}
+
+.dialog-submit-button {
+	background-color: #48bb78;
+}
+
+.dialog-submit-button:hover {
+	background-color: #38a169;
+}
+
+@media (max-width: 480px) {
+	.dialog {
+		margin: 1rem;
+		padding: 1.5rem;
+	}
+
+	.dialog-jumble {
+		font-size: 1.5rem;
+	}
+
+	.dialog-actions {
+		flex-direction: column;
+	}
+}

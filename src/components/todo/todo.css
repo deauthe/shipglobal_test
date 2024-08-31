@@ -1,13 +1,28 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	--primary-color: #0a1f44;
+	--secondary-color: #102a66;
+	--background-color: #0d1b30;
+	--text-color: #e0e6ed;
+	--accent-color: #2c6db2;
+	color: var(--text-color);
+	background-color: #0d1b30;
+	-webkit-font-smoothing: antialiased;
+}
+
 .todo-list {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
 	gap: 16px;
 	padding: 16px;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .todo-card {
-	background-color: #1a202c;
+	background-color: #000000;
 	color: white;
 	border-radius: 8px;
 	padding: 16px;
@@ -23,12 +38,21 @@
 }
 
 .todo-item {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 8px;
 	padding: 8px;
-	background-color: #2d3748;
+	background-color: var(--secondary-color);
 	border-radius: 4px;
+}
+
+.todo-card ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
 
 .navigation-buttons button {
@@ -48,7 +72,6 @@
 
 @media (max-width: 768px) {
 	.todo-list {
-		flex-direction: column;
-		gap: 8px;
+		grid-template-columns: 1fr; /* 1 column on mobile */
 	}
 }

@@ -16,15 +16,21 @@
 	justify-content: space-between;
 	padding: 16px;
 	cursor: pointer;
-	background-color: var(--primary-color);
+	background-color: #000000;
 	color: var(--text-color);
+	font-weight: bold;
+}
+
+.accordion-title.open {
+	opacity: 60%;
 }
 
 .accordion-body {
 	overflow: hidden;
 	max-height: 0;
-	transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+	transition: max-height 0.3s ease, padding 0.3s ease;
 	padding: 0 16px;
+	text-align: left;
 }
 
 .accordion-body.open {
@@ -37,5 +43,5 @@
 }
 
 .accordion-toggle-icon.open {
-	transform: rotate(360deg);
+	transform: rotate(90deg);
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./accordion.css";
-import { IconEyeBolt, IconEyeClosed } from "@tabler/icons-react";
+import { IconCaretDown, IconSquareX } from "@tabler/icons-react";
 const AccordionItem = ({ title, body }) => {
 	const [open, setOpen] = useState();
 
@@ -11,15 +11,17 @@ const AccordionItem = ({ title, body }) => {
 
 	return (
 		<div className="accordion-item">
-			<div className="accordion-title" onClick={handleToggle}>
+			<div
+				className={`accordion-title ${open ? "open" : ""}`}
+				onClick={handleToggle}
+			>
 				<div>{title}</div>
 				<div className={`accordion-toggle-icon ${open ? "open" : ""}`}>
-					{open ? <IconEyeClosed /> : <IconEyeBolt />}
+					{open ? <IconSquareX /> : <IconCaretDown />}
 				</div>
 			</div>
-			{open && (
-				<div className={`accordion-body ${open ? "open" : ""}`}>{body}</div>
-			)}
+
+			<div className={`accordion-body ${open ? "open" : ""}`}>{body}</div>
 		</div>
 	);
 };
